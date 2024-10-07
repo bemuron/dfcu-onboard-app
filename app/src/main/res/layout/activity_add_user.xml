@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/add_user_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/margin_padding_normal"
+                android:textSize="@dimen/text_size_xxnormal"
+                android:textColor="?attr/textColor"
+                android:text="@string/add_user_instructions"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_user_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textColorHint="?attr/hintTextColor"
+                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle">
+
+                <EditText
+                    android:id="@+id/edit_text_add_user_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_email"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="?attr/textColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/user_role_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_small"
+                android:textSize="@dimen/text_size_xxnormal"
+                android:textColor="?attr/textColor"
+                android:text="@string/role"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupAddUserRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioAddStaff"
+                    android:layout_marginBottom="@dimen/card_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/staff" />
+
+                <RadioButton
+                    android:id="@+id/radioAddAdmin"
+                    android:layout_marginTop="@dimen/card_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/administrator" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnAddUser"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@color/buttonBlue"
+                android:text="@string/btn_add"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

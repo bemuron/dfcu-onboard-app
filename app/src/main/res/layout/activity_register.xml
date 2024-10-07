@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/registration_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/margin_padding_normal"
+                android:textSize="@dimen/text_size_xxnormal"
+                android:textColor="?attr/textColor"
+                android:text="@string/register_on_onboarding"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                android:textColorHint="?attr/hintTextColor"
+                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/surname_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_surname_name"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="?attr/textColor"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_last_name"
+                android:textColorHint="?attr/hintTextColor"
+                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/other_names_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_other_name"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="textCapWords"
+                    android:textColor="?attr/textColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_dob"
+                android:textColorHint="?attr/hintTextColor"
+                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/date_of_birth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_dob"
+                    android:padding="10dp"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:inputType="date"
+                    android:textColor="?attr/textColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textColorHint="?attr/hintTextColor"
+                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle">
+
+                <EditText
+                    android:id="@+id/edit_text_register_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_email"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="?attr/textColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/user_role_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:padding="@dimen/margin_padding_small"
+                android:textSize="@dimen/text_size_xxnormal"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/role"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupUserRole"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioStaff"
+                    android:layout_marginBottom="@dimen/card_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/staff" />
+
+                <RadioButton
+                    android:id="@+id/radioAdmin"
+                    android:layout_marginTop="@dimen/card_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/administrator" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/id_images"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_small"
+                android:textSize="@dimen/text_size_xxnormal"
+                android:textColor="?attr/textColor"
+                android:text="@string/id_images_instructions"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_id_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@color/buttonBlue"
+                android:text="@string/btn_register"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

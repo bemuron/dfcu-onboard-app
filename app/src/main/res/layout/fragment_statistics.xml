@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".presentation.ui.fragment.StatisticsFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/log_search_til"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:textColorHint="?attr/hintTextColor"
+        android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_text_log_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/hint_log_date"
+            android:autofillHints="@string/hint_log_date"
+            android:padding="10dp"
+            android:focusable="false"
+            android:singleLine="true"
+            android:inputType="date"
+            android:textColor="?attr/textColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/search_log_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:layout_below="@id/log_search_til"
+        android:background="#000000"
+        android:text="@string/btn_retrieve"
+        android:textColor="@color/white" />
+
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/search_log_btn"
+        android:background="?attr/textColor"/>
+
+    <TextView
+        android:id="@+id/show_date_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Showing date"
+        android:textSize="@dimen/text_size_xnormal"
+        android:layout_below="@id/separator_line"/>
+
+    <TextView
+        android:id="@+id/total_requests_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/show_date_title_tv"
+        android:textSize="@dimen/text_size_huge"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:textColor="?attr/textColor"
+        android:text="52"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+    <TextView
+        android:id="@+id/total_requests_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/total_requests_value"
+        android:textSize="@dimen/text_size_header"
+        android:textColor="?attr/textColor"
+        android:text="Total Requests"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/margin_padding_small"/>
+
+    <TextView
+        android:id="@+id/staff_reg_api_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/textColor"
+        android:layout_below="@id/total_requests_title_tv"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:textSize="@dimen/text_size_xxnormal"
+        android:textStyle="bold"
+        android:text="@string/staff_reg"/>
+
+    <TextView
+        android:id="@+id/reg_api_value_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:layout_below="@id/total_requests_title_tv"
+        android:paddingStart="@dimen/margin_padding_normal"
+        android:paddingEnd="@dimen/margin_padding_normal"
+        android:layout_toEndOf="@id/staff_reg_api_title"
+        android:textColor="?attr/textColor"
+        android:textSize="@dimen/text_size_xxnormal" />
+
+    <TextView
+        android:id="@+id/retrieval_api_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/textColor"
+        android:layout_below="@id/staff_reg_api_title"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:textSize="@dimen/text_size_xxnormal"
+        android:textStyle="bold"
+        android:text="@string/staff_retrieval"/>
+
+    <TextView
+        android:id="@+id/retrieval_api_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingStart="@dimen/margin_padding_normal"
+        android:paddingEnd="@dimen/margin_padding_normal"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:layout_below="@id/reg_api_value_tv"
+        android:layout_toEndOf="@id/retrieval_api_title"
+        android:textColor="?attr/textColor"
+        android:textSize="@dimen/text_size_xxnormal" />
+
+    <TextView
+        android:id="@+id/update_api_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/retrieval_api_title"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:textStyle="bold"
+        android:text="@string/staff_update"
+        android:textColor="?attr/textColor"
+        android:textSize="@dimen/text_size_xxnormal"
+        android:layout_marginEnd="@dimen/margin_padding_xlarge" />
+
+    <TextView
+        android:id="@+id/update_api_value_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="@dimen/margin_padding_small"
+        android:paddingStart="@dimen/margin_padding_normal"
+        android:paddingEnd="@dimen/margin_padding_normal"
+        android:layout_below="@id/retrieval_api_value"
+        android:layout_toEndOf="@id/update_api_title"
+        android:textColor="?attr/textColor"
+        android:textSize="@dimen/text_size_xxnormal" />
+
+</RelativeLayout>

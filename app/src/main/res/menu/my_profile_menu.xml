@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.emetchint.dfcuonboarding.presentation.ui.fragment.UserProfileFragment">
+
+    <item android:id="@+id/action_edit_profile"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:orderInCategory="102"
+        android:visible="false"
+        android:title="@string/menu_edit_profile"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_change_theme"
+        android:icon="@drawable/baseline_sunny_24"
+        android:orderInCategory="103"
+        android:title="@string/menu_toggle_theme"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_log_out"
+        android:icon="@drawable/baseline_logout_24"
+        android:orderInCategory="104"
+        android:title="@string/menu_logout"
+        app:showAsAction="ifRoom"/>
+</menu>

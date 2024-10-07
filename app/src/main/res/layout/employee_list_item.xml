@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    card_view:cardBackgroundColor="?attr/cardBgColor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    card_view:cardCornerRadius="@dimen/card_album_radius">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_list_row"
+        android:paddingStart="?listPreferredItemPaddingLeft"
+        android:paddingRight="?listPreferredItemPaddingRight"
+        android:paddingEnd="?listPreferredItemPaddingRight"
+        android:paddingTop="@dimen/padding_list_row">
+
+        <LinearLayout
+            android:id="@+id/employee_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingLeft="72dp"
+            android:paddingRight="@dimen/padding_list_row"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/emp_list_emp_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="User Name"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size_xxnormal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emp_list_emp_id_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="?attr/textColor"
+                android:lines="1"
+                android:text="John 3:16, Mark 11:23"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <TextView
+                android:id="@+id/emp_list_dob_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="?attr/textColor"
+                android:lines="1"
+                android:text="30 verses"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <TextView
+                android:id="@+id/emp_list_email_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="30 verses"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <TextView
+                android:id="@+id/emp_list_reg_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textColor="?attr/hintTextColor"
+                android:layout_marginTop="3dp"
+                android:text="UGX.50,000"
+                android:textSize="@dimen/text_size_xnormal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/icon_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/icon_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_profile"
+                    android:layout_width="@dimen/icon_width_height"
+                    android:layout_height="@dimen/icon_width_height"
+                    android:src="@drawable/baseline_account_circle_24"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/icon_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/icon_text" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/emp_list_emp_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            android:text="Draft"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
